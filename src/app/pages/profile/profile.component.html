@@ -1,0 +1,62 @@
+<div class="py-5 px-40 flex">
+    <div>
+        <img class="w-48 h-48" src="assets/images/avatar.png" alt="avatar.png">
+    </div>
+    <div class=" p-5">
+        <div class="flex items-center gap-3">
+            <button mat-button>Username</button>
+            <button mat-raised-button>Edit Profile</button>
+            <button mat-icon-button>
+                <mat-icon>open_in_new</mat-icon>
+            </button>
+        </div>
+        <div class="flex items-center gap-3 mt-3">
+            <mat-chip-listbox>
+                <mat-chip>
+                    10 posts
+                </mat-chip>
+                <mat-chip color="primary">
+                    5 followers
+                </mat-chip>
+                <mat-chip color="accent">
+                    7 following
+                </mat-chip>
+            </mat-chip-listbox>
+        </div>
+        <div class="mt-3">
+            <p class="font-semibold">Fullname</p>
+        </div>
+    </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" (selectedIndexChange)="onTabChange($event)">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon style="margin-right: 8px;">table</mat-icon>
+            <span>Posts</span>
+        </ng-template>
+        <app-profile-posts></app-profile-posts>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon style="margin-right: 8px;">videocam</mat-icon>
+            <span>Reels</span>
+        </ng-template>
+        <app-profile-reels></app-profile-reels>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon style="margin-right: 8px;">bookmarks</mat-icon>
+            <span>Saved</span>
+        </ng-template>
+        <app-profile-posts></app-profile-posts>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon style="margin-right: 8px;">account_circle</mat-icon>
+            <span>Tagged</span>
+        </ng-template><app-profile-reels></app-profile-reels>
+    </mat-tab>
+</mat-tab-group>

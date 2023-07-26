@@ -1,0 +1,16 @@
+<mat-list>
+    <div mat-subheader>
+        <img src="assets/images/logo.png" alt="Logo">
+    </div>
+    <mat-action-list>
+        <button mat-list-item *ngFor="let sidebarItem of sidebarItems" (click)="onSidebarNavigation(sidebarItem)">
+            <mat-icon matListItemIcon>{{ sidebarItem.icon }}</mat-icon>
+            <div matListItemTitle>
+                <div [class.font-bold]="sidebarItem.link == activeUrl"
+                    [class.font-normal]="sidebarItem.link != activeUrl">
+                    {{ sidebarItem.title }}
+                </div>
+            </div>
+        </button>
+    </mat-action-list>
+</mat-list>
